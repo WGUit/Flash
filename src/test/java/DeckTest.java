@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by Jonathan on 2/8/2017.
@@ -39,9 +39,9 @@ public class DeckTest {
         dc.addCard(fc5);
 
         //index is zero based.
-        Flashcard result1 = dc.getCardByIndex(0);
-        Flashcard result2 = dc.getCardByIndex(2);
-        Flashcard result3 = dc.getCardByIndex(4);
+        Flashcard result1 = dc.getCard(0);
+        Flashcard result2 = dc.getCard(2);
+        Flashcard result3 = dc.getCard(4);
 
 
         assertEquals("frente", result1.getFront());
