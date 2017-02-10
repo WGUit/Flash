@@ -18,16 +18,11 @@ public class Deck {
         return this.deckList;
     }
 
-    public Flashcard getCardByIndex(int i) {
+    public Flashcard getCard(int i) {
         return this.deckList.get(i);
     }
 
-    public List<?> shuffleDeckByReference() {
-        Collections.shuffle(this.deckList, new Random((long)Math.random()));
-        return this.deckList;
-    }
-
-    public List<?> shuffleDeckByValue() {
+    public List<?> shuffle() {
         ArrayList<Flashcard> shuffledDeck = new ArrayList<Flashcard>(this.deckList);
         Collections.shuffle(shuffledDeck, new Random((long)Math.random()));
         return shuffledDeck;

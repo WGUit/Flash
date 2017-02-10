@@ -53,24 +53,21 @@ public class DeckTest {
     }
 
     @Test
-    public void shouldShuffleDeckByReference() throws Exception {
+    public void shouldShuffleDeck() throws Exception {
         Deck shuffledDeck = this.get52CardDeck();
+        List<?> preShuffledDeck = shuffledDeck.getDeck();
+        List<?> postShuffledDeck = shuffledDeck.shuffle();
 
-        assertFalse(shuffledDeck.equals(shuffledDeck.shuffleDeckByReference()));
-    }
-
-    @Test
-    public void shouldShuffleDeckByValue() throws Exception {
-        Deck shuffledDeck = this.get52CardDeck();
-
-        assertFalse(shuffledDeck.equals(shuffledDeck.shuffleDeckByValue()));
+        assertFalse(preShuffledDeck.equals(postShuffledDeck));
     }
 
     private Deck get52CardDeck() {
         Deck dc = new Deck();
 
         for (int i = 0; i < 52; i++){
-            Flashcard fc = new Flashcard("front", "back");
+            String currentIndex = Integer.toString(i);
+
+            Flashcard fc = new Flashcard("front" + currentIndex, "back" + currentIndex);
             dc.addCard(fc);
         }
         return dc;
