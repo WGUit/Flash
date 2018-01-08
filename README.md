@@ -1,12 +1,12 @@
-#A simple flashcard program
+# A simple flashcard program
 
-##A WGU Student Collaboration Project
+### A WGU Student Collaboration Project
 
 See current issues for unimplemented user stories, and feel free to add more, or decompose what is there.
 
 Any and all WGU students (present or former) are welcome to participate, I'm hoping this can be a friendly way that we as a community can help each other build software using common industry tools, but without the perceived pressure of contributing to "real" projects.
 
-##Contributing
+## Contributing
 
 The master branch is protected in order to enforce code review and participation. In order to get started with contributing, you will need to fork the project or work in a named branch on the main repo. I suggest forking. 
 
